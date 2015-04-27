@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Role 
+    public enum Role 
     {
-        public const string User = "User";
-        public const string Admin = "Admin";
+        User = 0,
+        Admin = 1
     }
 }

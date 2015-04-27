@@ -12,11 +12,11 @@ namespace ClassLibrary1.Repository
     public class JsonRepository<T> : IRepository<T> where T : class
 
     {
-        private IQueryable<T> ReadFile()
+        private List<T> ReadFile()
         {
             string text = System.IO.File.ReadAllText(typeof(T).Name + ".txt");
             var jsonObj = JsonConvert.DeserializeObject<List<T>>(text);
-            return jsonObj.AsQueryable();
+            return jsonObj;
         }
 
         private void WriteFile(List<T> listObj)
@@ -28,40 +28,37 @@ namespace ClassLibrary1.Repository
 
         public IQueryable<T> GetAll()
         {
-            return ReadFile();
+            return ReadFile().AsQueryable();
             
         }
 
         public IQueryable<T> FindBy(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
         {
-            return ReadFile().Where(predicate);
+            return ReadFile().AsQueryable().Where(predicate);
         }
 
         public T FirstBy(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
         {
-            return ReadFile().Where(predicate).FirstOrDefault();
+            return ReadFile().AsQueryable().Where(predicate).FirstOrDefault();
         }
 
         public void Add(T obj)
         {
-            ReadFile().ToList().Add(obj);
-            Save();
+            var temp = ReadFile();
+            temp.Add(obj);
+            WriteFile(temp);
         }
 
         public void Delete(T obj)
         {
-            ReadFile().ToList().Remove(obj);
-            Save();
+            var temp = ReadFile();
+            temp.Remove(obj);
+            WriteFile(temp);
         }
 
         public void SaveOrUpdate(T obj)
         {
-            WriteFile(ReadFile().ToList());
-        }
-
-        private void Save()
-        {
-            WriteFile(ReadFile().ToList());
+            WriteFile(ReadFile());
         }
     }
 }

@@ -15,11 +15,11 @@ namespace ClassLibrary1.Models
         public string LastName { get; set; }
         public DateTimeOffset RegistrationDate { get; set; }
         public Role Role { get; set; }
-       // public string Locale { get; set; }
-       // public TimeSpan TimeZone { get; set; }
+        public string Locale { get; set; }
+        public TimeSpan TimeZone { get; set; }
 
         public User(int userId, string login, string password, string firstName,
-            string lastName, DateTimeOffset registrationDate/*, Role role, string locale, TimeSpan timeZone*/)
+            string lastName, DateTimeOffset registrationDate, Role role, string locale, TimeSpan timeZone)
         {
             this.UserId = userId;
             this.Login = login;
@@ -27,9 +27,9 @@ namespace ClassLibrary1.Models
             this.FirstName = firstName;
             this.LastName = lastName;
             this.RegistrationDate = registrationDate;
-            //this.Role = role;
-            //this.Locale = locale;
-           // this.TimeZone = timeZone;
+            this.Role = role;
+            this.Locale = locale;
+            this.TimeZone = timeZone;
         }
 
 
