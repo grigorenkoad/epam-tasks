@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\TaskReport.cs" />
+    <Compile Include="Models\UserProject.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\User.cs" />
