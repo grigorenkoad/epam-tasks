@@ -14,15 +14,14 @@
         <div class="content-wrapper">
             <div class="float-right">
                 <section id="login">
-                    <p>111</p>
-                    <!--Html.Partial("_LoginPartial")-->
+                    @Html.Partial("_LoginPartial")
                 </section>
                 <nav>
                     <ul id="menu">
-                        <li>@Html.ActionLink("Projekts", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Мои заказы", "MyOrders", "Order")</li>
-                        <li>@Html.ActionLink("Курьер", "AllOrders", "Order")</li>
-                        <li>@Html.ActionLink("Пользователи", "Index", "Admin")</li>
+                        <li>@Html.ActionLink("Projects", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Tasks", "MyOrders", "Order")</li>
+                        <li>@Html.ActionLink("Reports", "AllOrders", "Order")</li>
+                        <li>@Html.ActionLink("Users", "Index", "Admin")</li>
                     </ul>
                 </nav>
             </div>

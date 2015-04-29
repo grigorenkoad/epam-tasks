@@ -8,6 +8,6 @@ namespace BL
 {
     public interface IBuisnessService<T> where T : class
     {
-        public List<T> GetAll();
+        List<T> GetAll();
     }
 }

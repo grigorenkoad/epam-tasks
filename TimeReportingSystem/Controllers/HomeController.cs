@@ -12,11 +12,11 @@ namespace TimeReportingSystem.Controllers
     {
         //
         // GET: /Home/
-        BusinessLogic<ProjectsViewModel> text = new BusinessLogic<ProjectsViewModel>();
+        BusinessService<ProjectsViewModel> text = new BusinessService<ProjectsViewModel>();
         public ActionResult Index()
         {
-            List<ProjectsViewModel> model = text.GetAll();
-            return View(model);
+            //List<ProjectsViewModel> model = text.GetAll();
+            return View();
         }
 
     }

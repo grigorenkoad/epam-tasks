@@ -2,12 +2,10 @@
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: #232323;
-   // background-color: #fee;
 }
 
 header, footer, nav, section {
     display: block;
-    background-color: #98ed56;
 }
 
 
@@ -89,8 +87,7 @@ header .content-wrapper {
 
 footer {
     clear: both;
-    //background-color: #e2e2e2;
-    background-color: #98ed56;
+    background-color: #e2e2e2;
     font-size: .8em;
     height: 100px;
 }
@@ -126,7 +123,7 @@ ul#menu {
 ----------------------------------------------------------*/
 #login {
     display: block;
-    font-size: .85em;
+    font-size: 16px;
     margin: 0 0 10px;
     text-align: right;
 }
