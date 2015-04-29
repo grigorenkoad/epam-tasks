@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1.Repository.Contracts
+namespace DAL.Repository.Contracts
 {
     public interface IRepository<T> where T : class
     {

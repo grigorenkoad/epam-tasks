@@ -1,0 +1,26 @@
+[
+	{
+		"UserId":"1",
+		"Login":"John22505",
+		"Password":"12345678",
+		"FirstName":"John",
+		"LastName":"Doe",
+		"RegistrationDate":"2015-04-14T14:47:34.1729447+03:00"
+	},
+	{
+		"UserId":"2",
+		"Login":"Anna505",
+		"Password":"12345678",
+		"FirstName":"Anna",
+		"LastName":"Smith",
+		"RegistrationDate":"2015-04-14T14:47:34.1739447+03:00"
+	},
+	{
+		"UserId":"3",
+		"Login":"Peter22",
+		"Password":"12345678",
+		"FirstName":"Peter",
+		"LastName":"Jones",
+		"RegistrationDate":"2015-04-14T14:47:34.1739447+03:00"
+	}
+]

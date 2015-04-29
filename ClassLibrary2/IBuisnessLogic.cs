@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary2
+namespace BL
 {
-    public class Class1
+    public interface IBuisnessService<T> where T : class
     {
+        public List<T> GetAll();
     }
 }

@@ -1,0 +1,18 @@
+﻿@model List<TimeReportingSystem.ViewMidels.ProjectsViewModel>
+
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<ul id="playlist" class="list-group">
+    @foreach (var project in Model)
+    {
+        <li class="list-group-item">
+            <h4 class="list-group-item-heading">
+                @Html.ActionLink(project.Name, "Details", new { id = project.Id })
+            </h4>
+        </li>
+    }
+</ul>
