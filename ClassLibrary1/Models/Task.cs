@@ -15,6 +15,7 @@ namespace DAL.Models
         public DateTime EndDate { get; set; }
         public string State { get; set; }
         public int TaskReportId { get; set; }
+        public virtual ICollection<Project> Projects { get; set; }
 
         public Task(int taskId, string name, string description, DateTime startDate, DateTime endDate, string state, int taskReportId)
         {

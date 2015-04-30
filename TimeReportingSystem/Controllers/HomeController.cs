@@ -1,10 +1,15 @@
-﻿using BL;
+﻿using AutoMapper;
+using BL;
+using DAL.Models;
+using DAL.Repository;
+using DAL.Repository.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TimeReportingSystem.ViewMidels;
+using TimeReportingSystem.ViewModels;
 
 namespace TimeReportingSystem.Controllers
 {
@@ -12,11 +17,21 @@ namespace TimeReportingSystem.Controllers
     {
         //
         // GET: /Home/
-        BusinessService<ProjectsViewModel> text = new BusinessService<ProjectsViewModel>();
+        IRepository<Project> repository = new JsonRepository<Project>();
         public ActionResult Index()
         {
-            //List<ProjectsViewModel> model = text.GetAll();
-            return View();
+            List<Project> model = repository.GetAll().ToList();
+            Mapper.CreateMap<Project, ProjectsViewModel>();
+            List<ProjectsViewModel> projectsView = Mapper.Map<List<Project>, List<ProjectsViewModel>>(model);
+            return View(projectsView);
+        }
+
+        public ActionResult Details(int id)
+        {
+            Project project = repository.FirstBy(x => x.ProjectId == id);
+            Mapper.CreateMap<Project, DetailsProjectViewModel>();
+            var detail = Mapper.Map<Project, DetailsProjectViewModel>(project);
+            return View(detail);
         }
 
     }

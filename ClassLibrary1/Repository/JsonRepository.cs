@@ -3,9 +3,11 @@ using DAL.Repository.Contracts;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace DAL.Repository
 {
@@ -14,15 +16,17 @@ namespace DAL.Repository
     {
         private List<T> ReadFile()
         {
-            string text = System.IO.File.ReadAllText(typeof(T).Name + ".txt");
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + typeof(T).Name + ".txt");
+            string text = System.IO.File.ReadAllText(path);
             var jsonObj = JsonConvert.DeserializeObject<List<T>>(text);
             return jsonObj;
         }
 
         private void WriteFile(List<T> listObj)
         {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + typeof(T).Name + ".txt");
             var text = JsonConvert.SerializeObject(listObj);
-            System.IO.File.WriteAllText(typeof(T).Name + ".txt", text);
+            System.IO.File.WriteAllText(path, text);
             
         }
 
