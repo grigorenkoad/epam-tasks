@@ -10,15 +10,15 @@
         @Html.ValidationSummary(true)
 
         <h2 class="form-signin-heading">@ViewBag.Title</h2>
-        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
-        @Html.ValidationMessageFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Login, new { @class = "form-control", placeholder = "Login" })
+        @Html.ValidationMessageFor(m => m.Login)
 
-        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Пароль" })
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
         @Html.ValidationMessageFor(m => m.Password)
 
         @Html.CheckBoxFor(m => m.RememberMe)
         @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Выполнить вход</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
     }
 </div>
 @section Scripts {

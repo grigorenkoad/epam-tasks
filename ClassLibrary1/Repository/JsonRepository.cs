@@ -14,6 +14,13 @@ namespace DAL.Repository
     public class JsonRepository<T> : IRepository<T> where T : class
 
     {
+        public User Login(string login, string password)
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + "User.txt");
+            string text = System.IO.File.ReadAllText(path);
+            var jsonObj = JsonConvert.DeserializeObject<List<User>>(text);
+            return jsonObj.FirstOrDefault(p => string.Compare(p.Login, login, true) == 0 && p.Password == password);
+        } 
         private List<T> ReadFile()
         {
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + typeof(T).Name + ".txt");

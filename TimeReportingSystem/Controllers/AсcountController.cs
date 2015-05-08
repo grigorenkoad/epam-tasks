@@ -1,8 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using DAL.Models;
+using DAL.Repository;
+using DAL.Repository.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-//using System.Web.Http;
 using System.Web.Mvc;
 using TimeReportingSystem.ViewModels;
 
@@ -12,6 +15,8 @@ namespace TimeReportingSystem.Controllers
     //[InitializeSimpleMembership]
     public class AccountController : Controller
     {
+        IRepository<User> repository = new JsonRepository<User>();
+        
         //
         // GET: /Account/Login
 
@@ -30,7 +35,7 @@ namespace TimeReportingSystem.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel model, string returnUrl)
         {
-            if (ModelState.IsValid/* && WebSecurity.Login(model.Email, model.Password, persistCookie: model.RememberMe)*/)
+            if (repository.Login(model.Login, model.Password) != null)
             {
                 return RedirectToLocal(returnUrl);
             }

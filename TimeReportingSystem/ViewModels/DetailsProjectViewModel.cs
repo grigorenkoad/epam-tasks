@@ -11,7 +11,7 @@ namespace TimeReportingSystem.ViewModels
         public int ProjectId { get; set; }
         public string Name { get; set; }
         //public string UserName { get; set; }
-        //public string TaskName { get; set; }
+        public ICollection<string> TaskName { get; set; }
         
         [Column(TypeName = "ntext")]
         public string Description { get; set; }

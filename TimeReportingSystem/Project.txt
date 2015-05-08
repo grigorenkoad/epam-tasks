@@ -1,21 +1,80 @@
 [
 	{							
 		"ProjectId":1,
-		"Name":"task1",
+		"Name":"project1",
 		"Description":"description",
 		"StartDate":"2015-04-24T18:11:54.5948698+03:00",
 		"EndDate":"2015-04-24T18:11:54.5948698+03:00",
-		"TaskId":1
+		"Tasks":[
+					{							
+						"TaskId":1,
+						"Name":"task1",
+						"Description":"description",
+						"StartDate":"2015-04-24T18:11:54.5948698+03:00",
+						"EndDate":"2015-04-24T18:11:54.5948698+03:00",
+						"State":"Draft",
+						"TaskReportId":1
+					},
+					{							
+						"TaskId":5,
+						"Name":"task5",
+						"Description":"description",
+						"StartDate":"2015-04-24T18:11:54.5948698+03:00",
+						"EndDate":"2015-04-24T18:11:54.5948698+03:00",
+						"State":"Draft",
+						"TaskReportId":1
+					},
+					{							
+						"TaskId":6,
+						"Name":"task6",
+						"Description":"description",
+						"StartDate":"2015-04-24T18:11:54.5948698+03:00",
+						"EndDate":"2015-04-24T18:11:54.5948698+03:00",
+						"State":"Draft",
+						"TaskReportId":1
+					}
+				]
 	},
 	{
 		"ProjectId":2,
-		"Name":"task2",
+		"Name":"project2",
 		"Description":"description",
 		"StartDate":"2015-04-24T18:11:54.595872+03:00",
-		"EndDate":"2015-04-24T18:11:54.595872+03:00"
+		"EndDate":"2015-04-24T18:11:54.595872+03:00",
+		"Tasks":[
+					{							
+						"TaskId":2,
+						"Name":"task2",
+						"Description":"description",
+						"StartDate":"2015-04-24T18:11:54.5948698+03:00",
+						"EndDate":"2015-04-24T18:11:54.5948698+03:00",
+						"State":"Draft",
+						"TaskReportId":1
+					}
+				]
 	},
-	{"ProjectId":3,"Name":"task3","Description":"description","StartDate":"2015-04-24T18:11:54.595872+03:00","EndDate":"2015-04-24T18:11:54.595872+03:00"
+	{"ProjectId":3,"Name":"project3","Description":"description","StartDate":"2015-04-24T18:11:54.595872+03:00","EndDate":"2015-04-24T18:11:54.595872+03:00","Tasks":[
+					{							
+						"TaskId":3,
+						"Name":"task3",
+						"Description":"description",
+						"StartDate":"2015-04-24T18:11:54.5948698+03:00",
+						"EndDate":"2015-04-24T18:11:54.5948698+03:00",
+						"State":"Draft",
+						"TaskReportId":1
+					}
+				]
 	},
-	{"ProjectId":4,"Name":"task4","Description":"description","StartDate":"2015-04-24T18:11:54.595872+03:00","EndDate":"2015-04-24T18:11:54.595872+03:00"
+	{"ProjectId":4,"Name":"project4","Description":"description","StartDate":"2015-04-24T18:11:54.595872+03:00","EndDate":"2015-04-24T18:11:54.595872+03:00","Tasks":[
+					{							
+						"TaskId":4,
+						"Name":"task4",
+						"Description":"description",
+						"StartDate":"2015-04-24T18:11:54.5948698+03:00",
+						"EndDate":"2015-04-24T18:11:54.5948698+03:00",
+						"State":"Draft",
+						"TaskReportId":1
+					}
+				]
 	}
 ]

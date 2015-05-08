@@ -10,10 +10,8 @@ namespace DAL.Models
     {
         public int UserId { get; set; }
         public int ProjectId { get; set; }
-        public UserProject(int userId, int projectId)
-        {
-            this.UserId = userId;
-            this.ProjectId = projectId;
-        }
+
+
+        
     }
 }

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace DAL.Models
+namespace TimeReportingSystem.Models
 {
     public class User
     {
@@ -17,8 +17,5 @@ namespace DAL.Models
         public Role Role { get; set; }
         public string Locale { get; set; }
         public TimeSpan TimeZone { get; set; }
-
-
-
     }
 }

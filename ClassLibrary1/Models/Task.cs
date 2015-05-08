@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    class Task
+    public class Task
     {
         public int TaskId { get; set; }
         public string Name { get; set; }
@@ -15,17 +15,7 @@ namespace DAL.Models
         public DateTime EndDate { get; set; }
         public string State { get; set; }
         public int TaskReportId { get; set; }
-        public virtual ICollection<Project> Projects { get; set; }
-
-        public Task(int taskId, string name, string description, DateTime startDate, DateTime endDate, string state, int taskReportId)
-        {
-            this.TaskId = taskId;
-            this.Name = name;
-            this.Description = description;
-            this.StartDate = startDate;
-            this.EndDate = endDate;
-            this.State = state;
-            this.TaskReportId = taskReportId;
-        }
+        public int ProjectId { get; set; }
+        public virtual Project Projects { get; set; }
     }
 }
